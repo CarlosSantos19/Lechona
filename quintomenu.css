@@ -42,7 +42,7 @@ body {
 
   #product-details-container {
     
-    display: flex;
+    display: none;
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     padding: 20px;
@@ -160,5 +160,5 @@ img {
   background-color: #4CAF50;
 }
 
-  
+
   
