@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de la Lechonería de la Abuela</title>
+    <link rel="stylesheet" href="tercermenu.css">
+</head>
+<body>
+    <h1>Lechonería de la Abuela</h1>
+    <div class="menu-container">
+        <div class="menu-item" onclick="toggleIngredients('lechona', 'ingredients-modal')" data-product="LECHONA:Plato tradicional colombiano que contiene cerdo entero asado relleno de cebolla, guisantes, patatas, hierbas frescas y diversas especias acompañado de arepa y chicharrón">
+            <img src="Lechona.jfif" alt="LECHONA" class="menu-item">
+            <label>LECHONA</label>
+        </div>
+
+        <div class="menu-item" onclick="toggleIngredients('chorizos', 'ingredients-modaldos')" data-product="CHORIZOS: Delicioso chorizo acompañado de arepa;" data-price="25000" data-ingredients='[]'>
+            <img src="Chorizos.jfif" alt="CHORIZOS" class="menu-item">
+            <label>CHORIZOS</label>
+        </div>
+
+        <div class="menu-item" onclick="toggleIngredients('coditos', 'ingredients-modaldos')" data-product="CODITOS: Huesos codillos acompañado de papas saladas o criollas" data-price="25000" data-ingredients='[{"name": "papas criollas"}, {"name": "papas saladas"}]'>
+            <img src="Coditos.jfif" alt="CODITOS" class="menu-item">
+            <label>CODITOS</label>
+        </div>
+
+        <div class="menu-item" onclick="toggleIngredients('costillas', 'ingredients-modaldos')" data-product="COSTILLAS: Costillas de Cerdo acompañada con papas saladas o criollas" data-price="25000" data-ingredients='[{"name": "papas criollas"}, {"name": "papas saladas"}]'>
+            <img src="Costilla.jfif" alt="COSTILLAS" class="menu-item">
+            <label>COSTILLAS</label>
+        </div>
+
+        <div class="menu-item" onclick="toggleIngredients('panceta', 'ingredients-modaldos')" data-product="PANCETA: Deliciosa panceta acompañada con papas saladas o criollas" data-price="25000" data-ingredients='[{"name": "papas criollas"}, {"name": "papas saladas"}]'>
+            <img src="Panzeta.jfif" alt="PANCETA" class="menu-item">
+            <label>PANCETA</label>
+        </div>
+
+        <div class="menu-item" onclick="toggleIngredients('tamales', 'ingredients-modaltres')" data-product="TAMALES: Deliciosos Tamales tolimenses" data-price="6000" data-ingredients='[{"name": "Tamales Pequeños"}, {"name": "Tamales Grandes"}]'>
+            <img src="Tamales.jfif" alt="TAMALES" class="menu-item">
+            <label>TAMALES</label>
+        </div>
+        
+    </div>
+
+    <div class="ingredients-modal" id="ingredients-modal">
+        <div class="ingredients-content">
+            <img src="" alt="" id="product-image-modal-1">
+            <h2 class="product-info"></h2>
+            <h2>Seleccione el tamaño del producto:</h2>
+            
+                <div>	
+                <input type="checkbox" id="cojin-15-platos" name="cojin-15-platos" value="cojin 15 platos", data-price="170000">
+                <label for="cojin-15-platos">Cojín 15 platos</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cojin-25-platos" name="cojin-25-platos" value="cojin 25 platos", data-price="280000">
+                <label for="cojin-25-platos">Cojín 25 platos</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cojin-30-platos" name="cojin-30-platos" value="cojin 30 platos", data-price="330000">
+                <label for="cojin-30-platos">Cojín 30 platos</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cojin-40-platos" name="cojin-40-platos" value="cojin 40 platos", data-price="370000">
+                <label for="cojin-40-platos">Cojín 40 platos</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cojin-50-platos" name="cojin-50-platos" value="cojin 50 platos", data-price="410000">
+                <label for="cojin-50-platos">Cojín 50 platos</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cojin-60-platos" name="cojin-60-platos" value="cojin 60 platos", data-price="450000">
+                <label for="cojin-60-platos">Cojín 60 platos</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cojin-80-platos" name="cojin-80-platos" value="cojin 80 platos", data-price="520000">
+                <label for="cojin-80-platos">Cojín 80 platos</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cojin-100-platos" name="cojin-100-platos" value="cojin 100 platos", data-price="720000">
+                <label for="cojin-100-platos">Cojín 100 platos</label>
+            </div>
+            <button class="close-button" onclick="closeIngredients('ingredients-modal')">Aceptar</button>
+        </div>
+    </div>
+
+    <div class="ingredients-modaldos" id="ingredients-modaldos">
+        <div class="ingredients-content">
+            <img src="" alt="" id="product-image-modal-2">
+            <h2 class="product-info"></h2>
+            <h2>Acompañantes:</h2>
+
+            <div>
+                <input type="checkbox" id="papas-saladas" name="papas-saladas" value="papas saladas">
+                <label for="papas-saladas">Papas Saladas</label>
+            </div>
+            <div>
+                <input type="checkbox" id="papas-criollas" name="papas-criollas" value="papas criollas">
+                <label for="papas-criollas">Papas Criollas</label>
+            </div>
+            <button class="close-btn" onclick="closeIngredients('ingredients-modaldos')">Aceptar</button>
+        </div>
+    </div>
+        
+    <div class="ingredients-modaltres" id="ingredients-modaltres">
+        <div class="ingredients-content">
+            <img src="" alt="" id="product-image-modal-3">
+            <h2 class="product-info"></h2>   
+            <h2>Tamales:</h2>
+            <div>
+                <input type="checkbox" id="tamales-pequeños" name="tamales-pequeños" value="tamales pequeños", data-price="6000">
+                <label for="tamales-pequeños">Tamales pequeños</label>
+            </div>
+            <div>
+                <input type="checkbox" id="tamales-grandes" name="tamales-grandes" value="tamales grandes", data-price="7000">
+                <label for="tamales-grandes">Tamales grandes</label>
+            </div>
+            <button class="close-btn" onclick="closeIngredients('ingredients-modaltres')">Aceptar</button>
+        </div>
+    </div>
+
+    <div id="product-details-container" class="product-details-container">
+        <img id="selected-product-image" class="selected-product-image" src="" alt="">
+        <h2 id="selected-product-name" class="selected-product-name"></h2>
+        <p id="selected-checklist-name" class="selected-checklist-name"></p>
+        <p id="selected-product-price" class="selected-product-price"></p>
+        <button id="btn-add-label">Añadir al carrito</button>
+        <button id="btn-cancel">Cancelar</button>
+    </div>
+    <script src="tercermenu.js"></script>
+</body>
+</html>
+
+
+
+

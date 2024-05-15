@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido y Entrega</title>
+    <link rel="stylesheet" href="gestion.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Realizar Pedido</h1>
+        <form id="order-form">
+            <label for="address">Dirección de Entrega:</label>
+            <input type="text" id="address" name="address" required>
+            <label for="items">Artículos Solicitados:</label>
+            <input type="text" id="items" name="items" required>
+            <button type="submit">Realizar Pedido</button>
+        </form>
+        <div id="tracking-info" style="display:none;">
+            <h2>Seguimiento del Pedido</h2>
+            <p id="status">Estado: Pendiente</p>
+            <div id="map"></div>
+        </div>
+    </div>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkQn2-fvUEBisLsv7Zbl1yTehvBQeZll4&libraries=places" loading="async"></script>
+    <script src="gestion.js"></script>
+</body>
+</html>

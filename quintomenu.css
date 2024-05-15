@@ -1,0 +1,164 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: yellow;
+  }
+  
+  header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .product {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .product img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  #product-details-container {
+    
+    display: flex;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px auto; /* Centra horizontalmente */
+    max-width: 400px; /* Ancho máximo del contenedor */
+    
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente los elementos */
+  }
+  
+  #product-details-container h2 {
+    text-align: center; /* Centra el texto */
+    font-size: 20px; /* Tamaño de fuente del nombre del producto */
+    margin-bottom: 10px;
+  }
+  
+  #product-details-container img {
+    max-width: 100%; /* Establece el ancho máximo de la imagen */
+    height: auto; /* Ajusta automáticamente la altura para mantener la proporción de aspecto */
+    display: block; /* Asegura que la imagen se muestre como un bloque */
+    margin: 0 auto; /* Centra horizontalmente la imagen */
+  }
+  
+  #product-details-container label {
+     
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #product-details-container select {
+ 
+   
+    margin: 0 auto; /* Centra el elemento horizontalmente */
+    width: 100%;
+    max-width: 200px; /* Ancho máximo del select */
+    margin-bottom: 10px;
+  }
+  
+  #product-details-container button {
+    
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+  }
+  
+  #product-details-container button:hover {
+    background-color: #45a049;
+  }
+  /* Estilos para la tabla */
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  /* Estilos para las filas impares */
+  tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Estilos para el encabezado de la tabla */
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  .btn-bebidas {
+    background-color: #FFA500;
+    color: #fff;
+    border: 1px solid #FF5733; /* Borde rojo */
+    border-radius: 5px;
+    cursor: pointer;
+  } 
+ 
+  @media only screen and (max-width: 600px) {
+    /* Estilos específicos para dispositivos con ancho máximo de 600px */
+    body {
+      font-size: 14px;
+    }
+  }
+  /* Ejemplo de diseño flexible */
+.container {
+  width: 90%; /* Utiliza un porcentaje para el ancho del contenedor */
+  max-width: 1200px; /* Establece un ancho máximo para el contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+/* Estilo para imágenes responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+}
+.btn-bebidas {
+  display: block;
+  margin: 5vh auto 0; /* Coloca el botón en la mitad de la página */
+  transform: translateY(0%); /* Centra verticalmente el botón */
+  max-width: 300px; /* Establece un ancho máximo para el botón */
+  padding: 15px 30px;
+  background-color: #45a049;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+.btn-bebidas:hover {
+  background-color: #4CAF50;
+}
+
+  
+  

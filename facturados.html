@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factura</title>
+  <link rel="stylesheet" href="factura.css">
+</head>
+<body>
+  <header>
+    
+    <img src="logo.jfif" alt="Logo de tu empresa">
+    <h1>Lechona de la Abuela</h1>
+    <p>Dirección: Calle Principal, Ciudad</p>
+    <p>Celular: 3016457276</p>
+  </header>
+  <main>
+    <h2>Factura</h2>
+    <p>Número de Factura: <span id="invoice-number">12345</span></p>
+    <h1>Formulario de Datos del Cliente</h1>
+    <form id="customer-form">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" required>
+      <label for="phone">Teléfono:</label>
+      <input type="text" id="phone" required>
+      <label for="address">Dirección:</label>
+      <input type="text" id="address" required>
+      <button type="submit">Enviar</button>
+    </form>
+    <table id="invoice-items">
+     
+ 
+  </main>
+ 
+      <div id="payment-options">Detalle Pedido
+        <p>Producto: <span id="product-name"></span></p>
+        <p>Opción escogida: <span id="product-option"></span></p>
+        <p>Total a pagar: <span id="product-price"></span></p>
+        <h3>Opciones de Pago</h3>
+        <label><input type="radio" name="payment" value="nequi"> Nequi</label>
+        <label><input type="radio" name="payment" value="efectivo"> Efectivo</label>
+        
+      </div>
+      <button id="confirm-button">Nequí</button>
+      <button id="finalizar-button" >finalizar</button>
+</div>
+  <script src="factura.js"></script>
+ 
+</body>
+</html>

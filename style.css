@@ -1,0 +1,246 @@
+.menu-container {
+    position: absolute;
+    top: 20px; /* Ajusta según sea necesario */
+    left: 20px; /* Ajusta según sea necesario */
+    z-index: 2;
+}
+
+.menu-container button {
+    background-color: #FFD700; /* Amarillo */
+    color: #333; /* Texto oscuro para mejor legibilidad */
+    border: none;
+    padding: 10px 20px;
+    font-family: Montserrat, sans-serif; /* Fuente sans-serif */
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.menu-container .header-buttons button {
+    background-color: #FFA500;
+    }
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-buttons button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: none;
+    background-color: #f2f2f2;
+    text-align: left;
+    text-align: center;
+}
+
+.header-buttons button:hover {
+    background-color: #ddd;
+}
+
+
+/* Estilos para el contenedor del icono y el texto */
+.start-container {
+    text-align: center;
+}
+
+.imagen-container {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    animation: slideIn 0.5s ease forwards;
+}
+
+#background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para asegurarse de que la imagen cubra todo el contenedor */
+    
+}
+
+.chat-container {
+    
+    max-width: 300px;
+    max-height: 80%; /* Altura máxima del contenedor */
+    margin-top: auto; /* Ajusta según sea necesario */
+    margin-right: 20px; /* Margen desde el borde derecho */
+    overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido es demasiado grande */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
+    position: fixed;
+    display: none; /* Oculta el contenedor del chat por defecto */
+    right: 20px; /* Ajusta el valor según sea necesario */
+    transform: translateY(-50%);
+    animation: slideIn 0.5s ease forwards;
+    z-index: 3;
+}
+
+/* Alineación del texto a la derecha */
+.chat-container p {
+    text-align: right;
+    display: none;
+}
+/* Estilos para el ícono del chat */
+.chat-icon-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 4; /* Asegura que el ícono esté por encima de otros elementos */
+    text-align: center;
+}
+
+.chat-icon-container img {
+    width: 50px; /* Tamaño del ícono */
+    height: auto;
+}
+
+#chat-box {
+    height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f2f2f2; /* Fondo gris claro */
+}
+
+#user-input {
+    width: calc(100% - 60px);
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #FFA500;
+    color: #fff;
+    border: 1px solid #FF5733; /* Borde rojo */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product {
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.product img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #FFA500; /* Amarillo más claro al pasar el mouse */
+}
+
+.ingredients {
+    display: none;
+}
+
+.ingredients p {
+    margin-top: 5px;
+}
+
+/* Agrega estilos para el icono del chat */
+
+    
+
+.chat-icon-container img {
+    width: 80%;
+    height: auto;
+}
+
+.selected {
+    background-color: #FFA500; /* Cambiar color de fondo cuando se seleccione */
+    color: white; /* Cambiar color del texto para que sea legible */
+}
+
+
+
+
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    .chat-container {
+        max-width: 90%;
+    }
+
+    #user-input {
+        width: calc(100% - 70px);
+    }
+}
+/* Animación al enviar un mensaje */
+.message {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+.header-buttons {
+    display: none; /* Oculta los botones del menú por defecto */
+    position: absolute;
+    top: 100%; /* Coloca los botones del menú debajo del botón "Quienes somos" */
+    left: 0;
+
+
+    border-top: none; /* Elimina el borde superior para evitar duplicación */
+    z-index: 999; /* Ajusta el valor z-index para asegurar que esté por encima de otros elementos */
+}
+
+.menu-container:hover .header-buttons {
+    display: block; /* Muestra los botones del menú cuando se pasa el mouse sobre el contenedor */
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    /* Estilos para dispositivos con ancho de pantalla de hasta 600px */
+}
+
+/* Estilos para tabletas */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Estilos para tabletas con ancho de pantalla entre 601px y 1024px */
+}
+
+/* Estilos para computadoras de escritorio */
+@media only screen and (min-width: 1025px) {
+    /* Estilos para dispositivos con ancho de pantalla mayor a 1024px */
+}
+img, video {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PEDIDOS</title>
+  <link rel="stylesheet" href="pedidos.css">
+</head>
+<body>
+  <header>
+    <img src="logo.jfif" alt="Logo de tu empresa">
+    <h1>Lechona de la Abuela</h1>
+  </header>
+  <main>
+    <h2>PEDIDOS REALIZADOS POR EL CLIENTE</h2>
+    <div id="customer-details">
+      <h2>Detalles del Cliente</h2>
+      <label for="customer-name">Nombre:</label>
+      <input type="text" id="customer-name" placeholder="Nombre del cliente">
+      <label for="customer-phone">Teléfono:</label>
+      <input type="text" id="customer-phone" placeholder="Teléfono del cliente">
+      <label for="customer-address">Dirección:</label>
+      <input type="text" id="customer-address" placeholder="Dirección del cliente">
+    </div>
+    <table id="invoice-items">
+      <!-- Aquí pueden ir las filas de la factura -->
+    </table>
+
+  </main>
+  <div id="payment-options">Detalle Pedido
+    <p>Producto: <span id="product-name"></span></p>
+    <p>Opción escogida: <span id="product-option"></span></p>
+    <p>Total a pagar: <span id="product-price"></span></p>
+    <button id="start-button">Iniciar Pedido</button>
+    <div id="status-containers" style="display: none;">
+      <div class="status-container">
+        <div class="oval gris" id="status-iniciado"></div>
+        <p>Iniciado</p>
+      </div>
+      <div class="status-container">
+        <div class="oval gris" id="status-en-proceso"></div>
+        <p>En Proceso</p>
+      </div>
+      <div class="status-container">
+        <div class="oval gris" id="status-finalizado"></div>
+        <p>Finalizado</p>
+      </div>
+    </div>
+    <div id="message"></div>
+    <h3>Pago realizado por:</h3>
+    <label><input type="radio" name="payment" value="nequi"> Nequi</label>
+    <label><input type="radio" name="payment" value="efectivo"> Efectivo</label>
+  </div>
+  <button id="confirm-button">Confirmar Pedido</button>
+  <script src="pedidos.js"></script>
+</body>
+</html>

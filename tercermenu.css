@@ -1,0 +1,107 @@
+/* Estilos generales */
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: yellow;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.menu-container {
+    text-align: center;
+    margin-top: 20px;
+    display: flex; /* Cambio a flexbox */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una sola línea */
+}
+
+.menu-item {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.separator-line {
+    margin-top: 20px;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+/* Estilos específicos para los modales de ingredientes y producto */
+.ingredients-modal, .ingredients-modaldos, .ingredients-modaltres, .product-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.ingredients-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.close-button, .close-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-button:hover, .close-btn:hover {
+    background-color: #0056b3;
+}
+
+.ingredients-list label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#product-image {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#product-info {
+    margin-bottom: 10px;
+}
+
+
+#btn-bebidas::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Distancia de la línea desde el botón */
+    width: 100%; /* Ancho de la línea igual al ancho del botón */
+    height: 1px; /* Grosor de la línea */
+    background-color: black; /* Color de la línea */
+}
+
+
+
+      
+     
+
+      
+
+ 
