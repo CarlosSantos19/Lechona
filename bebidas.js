@@ -4,6 +4,9 @@ function showProductDetails(productId) {
     console.log("Mostrando detalles del producto:", productId);
     var productDetailsContainer = document.getElementById("product-details-container");
     productDetailsContainer.classList.remove("hidden");
+    productDetailsContainer.style.display = "block"; // Cambia el estilo display a block para mostrar el contenedor
+    productDetailsContainer.scrollIntoView({ behavior: "smooth" }); // Enfocar el contenedor con desplazamiento suave
+    
     
     
     var productName = document.getElementById("product-name");
@@ -60,6 +63,45 @@ function showProductDetails(productId) {
     }
   }
 
+  function cancelProduct() {
+    console.log("Pedido cancelado");
+  
+    // Ocultar los detalles del producto
+    var productDetailsContainer = document.getElementById("product-details-container");
+    productDetailsContainer.classList.add("hidden");
+  
+    // Restablecer el formulario de detalles del producto
+    var productName = document.getElementById("product-name");
+    productName.textContent = "";
+    productImage.src = "";
+    var sizeSelect = document.getElementById("size");
+    sizeSelect.innerHTML = "";
+  
+    // Enfocar el inicio de la página
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  // Función para obtener todos los pedidos almacenados del localStorage
+  function obtenerPedidos() {
+    // Obtener todos los pedidos almacenados (si existen)
+    var pedidos = JSON.parse(localStorage.getItem('pedidos')) || [];
+    
+    return pedidos;
+  }
+
+  function removeItem(button) {
+    console.log("Producto eliminado");
+    
+    // Obtener la fila que contiene el botón
+    var row = button.parentNode.parentNode;
+    
+    // Eliminar la fila de la tabla
+    row.parentNode.removeChild(row);
+  
+    // Actualizar el precio total
+    updateTotalPrice();
+  }
+
 function acceptProduct() {
     console.log("Producto aceptado");
   
@@ -77,7 +119,7 @@ function acceptProduct() {
     var newRow = summaryTableBody.insertRow();
     newRow.innerHTML = `
    
-      <td><button onclick="removeItem(this)">Eliminar</button></td>
+    <td><button onclick="removeItem(this)">Eliminar</button></td>
     `;
     
     // Insertar celdas con los detalles del producto en la nueva fila
